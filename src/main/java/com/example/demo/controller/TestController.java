@@ -16,8 +16,11 @@ public class TestController {
     private UserService userService;
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String hello() {
-        return "Hello Spring";
+    public User hello() {
+        User user = new User();
+        user.setName("Fluently");
+        user.setSex("24");
+        return user;
     }
 
     @RequestMapping(value = "/insertUser", method = RequestMethod.POST)
